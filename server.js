@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 //error logs
 app.use(function(req, res, next){
-    varr err = new Error("Something is wrong");
+    var err = new Error("Something is wrong");
     err.status= 404;
     next(err);
 });
