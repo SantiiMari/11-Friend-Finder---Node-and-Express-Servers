@@ -27,9 +27,29 @@ apiRouter.post('/api/friends', function(req, res){
     });
 
     var bestMatch = {};
-    var marchedFriend =0;
+    var matchedFriend =0;
+    var bestMatchedScore=40;
+
+    //loop thru array
+
+    for (var friend =0; friend < friendsData.lenght; friend++){
+        var totalScoresDiff = 0;
+    for (var score= 0; score < friendsData[friend].scores.lenght; score ++){
+        totalScoresDiff += diff;
+    }
+    if (totalScoresDiff < bestMatchedScore){
+        matchedFriend = friend;
+        bestMatchedScore = totalScoresDiff;
+    }
+    }
+    bestMatch = friendsData[matchedFriend];
+    friendsData.push(newFriend);
+    res.join(bestMatch);
+    console.log(bestMatch);
 
 
 
 
-})
+});
+
+module.exports = apiRouter;
