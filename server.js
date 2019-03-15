@@ -9,7 +9,7 @@ var htmlRoutes = require ('./app/routing/htmlRoutes');
 
 var PORT = process.env.PORT || 3000;
 
-//Routes
+//General Routes
 
 app.use('/', apiRoutes);
 app.use('/', htmlRoutes);
@@ -18,4 +18,14 @@ app.use(bodyParser.urlencoded({ extended:true}));
 app.use(bodyParser.json());
 //make sure app can parse data
 
+//error logs
+app.use(function(req, res, next){
+    varr err = new Error("Something is wrong");
+    err.status= 404;
+    next(err);
+});
 
+//listening
+app.listen(PORT, function(){
+    console.log("App is tuned in on PORT" + PORT)
+})
