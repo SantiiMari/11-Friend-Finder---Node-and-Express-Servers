@@ -1,11 +1,11 @@
 //dependancies
 
-var express = require ('express');
+var express = require('express');
 var app = express();
-var path = require ('path');
-var bodyParser = require ('body-parser');
-var apiRoutes = require ('./app/routing/apiRoutes');
-var htmlRoutes = require ('./app/routing/htmlRoutes');
+var path = require('path');
+var bodyParser = require('body-parser');
+var apiRoutes = require('./app/routing/apiRoutes');
+var htmlRoutes = require('./app/routing/htmlRoutes');
 
 var PORT = process.env.PORT || 3001;
 
@@ -15,7 +15,7 @@ app.use('/', apiRoutes);
 app.use('/', htmlRoutes);
 app.use(express.static(__dirname + '/app/public'));
 // app.use(express.static('public'))
-app.use(bodyParser.urlencoded({ extended:true}));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 // //make sure app can parse data
 
