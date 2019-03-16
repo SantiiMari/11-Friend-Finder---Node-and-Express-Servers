@@ -18,7 +18,7 @@ apiRouter.post('/api/friends', function(req, res){
     if (score.scores==="1 (Strongly Dissagree)") {
         scores.score =1;
     }
-    else if (score.scores === '5 (Strong Agreement)'{
+    else if (score.scores === '5 (Strong Agreement)'){
         score.scores = 5;
     }
     else {
