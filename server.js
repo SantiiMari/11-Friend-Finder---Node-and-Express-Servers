@@ -14,6 +14,7 @@ var PORT = process.env.PORT || 3001;
 app.use('/', apiRoutes);
 app.use('/', htmlRoutes);
 app.use(express.static(__dirname + '/app/public'));
+// app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended:true}));
 app.use(bodyParser.json());
 // //make sure app can parse data
