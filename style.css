@@ -1,0 +1,12 @@
+.minieee {
+align-content: center;
+border: none;
+display: block;
+margin: 0 auto;
+/* align-items: center!important;
+align-content: center!important; */
+}
+.miniee{
+    position: relative;
+    left:310px;
+}
