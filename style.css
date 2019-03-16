@@ -10,3 +10,10 @@ align-content: center!important; */
     position: relative;
     left:310px;
 }
+
+.snuggle{
+    width: 100%;
+}
+.jumbotron{
+    text-align: center;
+}

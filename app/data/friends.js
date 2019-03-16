@@ -1,4 +1,4 @@
-var friendData = [
+var friendArr = [
     {
         "scores" : [3,2,5,1,3,2,2,1,3,5],
         "photo" : "https://cdn.bulbagarden.net/upload/e/e2/133Eevee.png",
@@ -42,4 +42,4 @@ var friendData = [
     ];
     
 // export to other modules
-    module.exports = friendData;
+    module.exports = friendArr;
